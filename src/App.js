@@ -1,7 +1,16 @@
 import React from 'react';
+import { Router } from 'react-router-dom';
 
-// import { Container } from './styles';
+import history from './services/history';
+import Routes from './routes';
+
+import GlobalStyle from './styles/global';
 
 export default function App() {
-  return <div>MyPort</div>;
+  return (
+    <Router history={history}>
+      <Routes />
+      <GlobalStyle />
+    </Router>
+  );
 }
