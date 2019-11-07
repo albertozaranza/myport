@@ -22,6 +22,7 @@ export const Header = styled.div`
   background-size: cover;
   background-position: center;
   color: #fff;
+  border-bottom: 10px solid orange;
 
   h1 {
     font-size: 40px;
@@ -29,6 +30,15 @@ export const Header = styled.div`
 
   span {
     font-size: 24px;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border: 10px solid #fff;
+    border-radius: 100%;
+    position: absolute;
+    top: 250px;
   }
 `;
 
