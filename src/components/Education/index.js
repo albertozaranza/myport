@@ -5,7 +5,7 @@ import { Container, TimelineContainer, Description } from './styles';
 
 export default function Education() {
   const [value, setValue] = useState(0);
-  const [previous, setPrevious] = useState(0);
+  const [previous, setPrevious] = useState(0); // eslint-disable-line
 
   function handleValues(index, previousValue) {
     setValue(index);
