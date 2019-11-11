@@ -15,7 +15,7 @@ export const Container = styled.div`
   background-size: cover;
   background-position: center;
   color: #fff;
-  border-bottom: 10px solid orange;
+  border-bottom: 10px solid #ffa500;
 
   h1 {
     font-size: 40px;

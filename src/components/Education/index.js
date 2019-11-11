@@ -1,34 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
+import HorizontalTimeline from 'react-horizontal-timeline';
 
-import { Container, TimeLine, BigPoint, Point } from './styles';
+import { Container, TimelineContainer, Description } from './styles';
 
 export default function Education() {
-  const date = new Date();
+  const [value, setValue] = useState(0);
+  const [previous, setPrevious] = useState(0);
 
-  const points = [
+  function handleValues(index, previousValue) {
+    setValue(index);
+    setPrevious(previousValue);
+  }
+
+  const dates = [new Date('12/01/2014'), new Date()];
+  const data = [
     {
-      year: 2014,
-      description: 'Ensino Médio Completo',
+      description: 'Ensino médio',
+      local: 'Colégio Marista de Aracati',
     },
     {
-      year: 2019,
-      description: 'Curso Superior Incompleto',
+      description: 'Ensino Superior Incompleto',
+      local:
+        'IFCE - Instituto Federal de Educação, Ciência e Tecnologia do Ceará',
     },
   ];
 
   return (
     <Container>
       <h1>Educação</h1>
-      <TimeLine>
-        <BigPoint>1997</BigPoint>
-        {points.map(point => (
-          <Point>
-            <p>{point.description}</p>
-            <span>{point.year}</span>
-          </Point>
-        ))}
-        <BigPoint>{date.getFullYear()}</BigPoint>
-      </TimeLine>
+      <TimelineContainer>
+        <HorizontalTimeline
+          index={value}
+          indexClick={index => {
+            handleValues(index, value);
+          }}
+          values={dates}
+          styles={{
+            background: '#f8f8f8',
+            foreground: '#ffa500',
+            outline: '#dfdfdf',
+          }}
+        />
+      </TimelineContainer>
+      <Description>
+        <span>{data[value].description}</span>
+        <p>{data[value].local}</p>
+      </Description>
     </Container>
   );
 }

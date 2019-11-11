@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   background-color: #19181f;
   padding: 160px 15px 15px 15px;
-  border-bottom: 10px solid orange;
+  border-bottom: 10px solid #ffa500;
   color: #fff;
   font-size: 16px;
 
@@ -33,25 +33,25 @@ export const Text = styled.div``;
 
 const changeToWhite = keyframes`
   from{
-    background-color: orange;
+    background-color: #ffa500;
     color: #19181f;
     border: none;
   }
   to {
-    color: orange;
+    color: #ffa500;
     background-color: #19181f;
-    border: 1px solid orange;
+    border: 1px solid #ffa500;
   }
 `;
 
 const changeToOrange = keyframes`
   from{
-    color: orange;
+    color: #ffa500;
     background-color: #19181f;
-    border: 1px solid orange;
+    border: 1px solid #ffa500;
   }
   to {
-    background-color: orange;
+    background-color: #ffa500;
     color: #19181f;
     border: none;
   }
