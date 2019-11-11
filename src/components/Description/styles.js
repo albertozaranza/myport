@@ -6,9 +6,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #eee;
-  padding: 160px 10px 10px 10px;
-  font-size: 14px;
+  background-color: #19181f;
+  padding: 160px 15px 15px 15px;
+  border-bottom: 10px solid orange;
+  color: #fff;
+  font-size: 16px;
 
   span {
     font-size: 18px;
@@ -19,22 +21,25 @@ export const Container = styled.div`
   span {
     margin-bottom: 10px;
   }
+
+  p {
+    max-width: 650px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
 `;
 
-export const Text = styled.div`
-  max-width: 700px;
-  margin-bottom: 20px;
-`;
+export const Text = styled.div``;
 
 const changeToWhite = keyframes`
   from{
     background-color: orange;
-    color: #fff;
+    color: #19181f;
     border: none;
   }
   to {
     color: orange;
-    background-color: #fff;
+    background-color: #19181f;
     border: 1px solid orange;
   }
 `;
@@ -42,12 +47,12 @@ const changeToWhite = keyframes`
 const changeToOrange = keyframes`
   from{
     color: orange;
-    background-color: #fff;
+    background-color: #19181f;
     border: 1px solid orange;
   }
   to {
     background-color: orange;
-    color: #fff;
+    color: #19181f;
     border: none;
   }
 `;
@@ -56,9 +61,9 @@ export const Button = styled.button`
   height: 50px;
   width: 150px;
   border-radius: 10px;
-  animation: ${changeToOrange} 500ms forwards;
+  animation: ${changeToOrange} 350ms forwards;
 
   :hover {
-    animation: ${changeToWhite} 500ms forwards;
+    animation: ${changeToWhite} 350ms forwards;
   }
 `;

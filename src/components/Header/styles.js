@@ -40,4 +40,5 @@ export const Border = styled.div`
   width: 300px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  margin-bottom: 5px;
 `;
