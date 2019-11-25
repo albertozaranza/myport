@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
@@ -29,41 +29,18 @@ export const Container = styled.div`
   }
 `;
 
-export const Text = styled.div``;
-
-const changeToWhite = keyframes`
-  from{
-    background-color: #ffa500;
-    color: #19181f;
-    border: none;
-  }
-  to {
-    color: #ffa500;
-    background-color: #19181f;
-    border: 1px solid #ffa500;
-  }
-`;
-
-const changeToOrange = keyframes`
-  from{
-    color: #ffa500;
-    background-color: #19181f;
-    border: 1px solid #ffa500;
-  }
-  to {
-    background-color: #ffa500;
-    color: #19181f;
-    border: none;
-  }
-`;
-
 export const Button = styled.button`
   height: 50px;
   width: 150px;
   border-radius: 10px;
-  animation: ${changeToOrange} 350ms forwards;
+  background-color: #ffa500;
+  color: #19181f;
+  border: none;
+  transition: 0.5s;
 
   :hover {
-    animation: ${changeToWhite} 350ms forwards;
+    color: #ffa500;
+    background-color: #19181f;
+    border: 1px solid #ffa500;
   }
 `;
