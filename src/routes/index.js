@@ -5,9 +5,9 @@ import Home from '~/pages/Home';
 
 export default function Routes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={window.location.pathname || ''}>
       <Switch>
-        <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
+        <Route exact component={Home} />
       </Switch>
     </BrowserRouter>
   );
