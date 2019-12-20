@@ -5,7 +5,7 @@ import Home from '~/pages/Home';
 
 export default function Routes() {
   return (
-    <BrowserRouter basename={window.location.pathname || ''}>
+    <BrowserRouter basename="/myport">
       <Switch>
         <Route path="/" exact component={Home} />
       </Switch>
